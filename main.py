@@ -2,6 +2,18 @@ class CustomStr:
     def __init__(self, string):
         self.string = string
 
+    def __str__(self):
+        return self.string
+
+    def __getitem__(self, index):
+        return self.string[index]
+
+    def __setitem__(self, index, value):
+        list = list(self.string)
+        list[index] = value
+
+        return "".join(list)
+
     def custom_split(self, *splits):
         split_string = [self.string]
         for i in splits:
