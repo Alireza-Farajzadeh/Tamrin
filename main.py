@@ -24,9 +24,8 @@ class CustomStr:
         return "".join(result)
 
     def is_float(self):
-        a = "1.2"
         try:
-            float(a)
+            float(self.string)
             return True
         except:
             return False
